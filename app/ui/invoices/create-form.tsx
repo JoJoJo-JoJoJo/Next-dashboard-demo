@@ -134,9 +134,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
           state.errors?.customerId ||
           state.errors?.status) && (
           <div id="state-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-500">
-              Missing Fields. Failed to Create Invoice.
-            </p>
+            <p className="mt-2 text-sm text-red-500">{state.message}</p>
           </div>
         )}
       </div>
